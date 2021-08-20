@@ -1,3 +1,3 @@
 export class SDKServer {
-  serverRoot: string = ""
+  serverRoot: string = ''
 }

@@ -15,6 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "lint-fix": "tsdx lint --fix",
     "prepare": "tsdx build",
     "shell":"node",
     "size": "size-limit",
@@ -27,7 +28,7 @@
   },
   "prettier": {
     "printWidth": 80,
-    "semi": true,
+    "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },
