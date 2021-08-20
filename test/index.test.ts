@@ -29,6 +29,8 @@ describe('Create example server', () => {
     var response = await API.Todos.getOne(5)
 
     expect(response.data.id).toBe(5)
-    expect(response.data.title).toBe("laboriosam mollitia et enim quasi adipisci quia provident illum")
+    expect(response.data.title).toBe(
+      'laboriosam mollitia et enim quasi adipisci quia provident illum'
+    )
   })
 })
