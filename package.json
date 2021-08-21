@@ -20,7 +20,9 @@
     "shell": "node",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "json-server":"json-server --watch ./test/data/db.json --port 6626 || exit 0"
+    "json-server": "json-server --watch ./test/data/db.json --port=8000",
+    "json-server-background": "pm2 --name JsonServer start \"npm run json-server\"",
+    "json-server-background-stop":"pm2 delete JsonServer"
   },
   "husky": {
     "hooks": {
@@ -51,6 +53,7 @@
     "concurrently": "^6.2.1",
     "husky": "^7.0.1",
     "json-server": "^0.16.3",
+    "pm2": "^5.1.1",
     "size-limit": "^5.0.3",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",

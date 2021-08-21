@@ -23,7 +23,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Starting json-server
-        run: yarn json-server
+        run: yarn json-server-background
 
       - name: Lint
         run: yarn lint
@@ -33,3 +33,6 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Stopping json-server
+        run: yarn json-server-background-stop
