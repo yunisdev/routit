@@ -9,7 +9,7 @@ describe('Create example server', () => {
   }
 
   class MyServer extends SDKServer {
-    serverRoot = 'http://localhost:6626'
+    serverRoot = 'http://localhost:8000'
     Todos = new RestRoute<TodosType>(this, 'todos')
   }
 
