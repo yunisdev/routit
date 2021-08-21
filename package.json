@@ -21,7 +21,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "json-server": "json-server --watch ./test/data/db.json --port=8000",
-    "json-server-background": "pm2 --name JsonServer start \"npm run json-server\"",
+    "json-server-background": "pm2 --name JsonServer start \"json-server --watch ./test/data/db.json --port=8000\"",
     "json-server-background-stop":"pm2 delete JsonServer"
   },
   "husky": {
