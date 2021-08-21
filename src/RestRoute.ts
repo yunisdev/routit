@@ -9,7 +9,7 @@ export class RestRoute<
   PutResponseType = ObjectType,
   PatchRequestType = ObjectType,
   PatchResponseType = ObjectType,
-  DeleteResponseType = undefined | null | ''
+  DeleteResponseType = undefined | null | '' | {}
 > {
   routeName: string
   server: SDKServer

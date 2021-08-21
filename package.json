@@ -13,13 +13,14 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "concurrently --kill-others \"npm run json-server\" \"tsdx test --runInBand\"",
     "lint": "tsdx lint",
     "lint-fix": "tsdx lint --fix",
     "prepare": "tsdx build",
-    "shell":"node",
+    "shell": "node",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "json-server":"json-server --watch ./test/data/db.json --port 6626"
   },
   "husky": {
     "hooks": {
@@ -47,7 +48,9 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.3",
+    "concurrently": "^6.2.1",
     "husky": "^7.0.1",
+    "json-server": "^0.16.3",
     "size-limit": "^5.0.3",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
