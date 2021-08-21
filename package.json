@@ -13,14 +13,14 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "concurrently --kill-others \"npm run json-server\" \"tsdx test --runInBand\"",
+    "test": "tsdx test --runInBand",
     "lint": "tsdx lint",
     "lint-fix": "tsdx lint --fix",
     "prepare": "tsdx build",
     "shell": "node",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "json-server":"json-server --watch ./test/data/db.json --port 6626"
+    "json-server":"json-server --watch ./test/data/db.json --port 6626 || exit 0"
   },
   "husky": {
     "hooks": {
