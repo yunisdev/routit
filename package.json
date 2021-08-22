@@ -36,7 +36,14 @@
     "trailingComma": "es5"
   },
   "name": "routit",
-  "author": "Yunis Huseynzade",
+  "author": "Yunis Huseynzade <yunisdev.04@gmail.com> (https://yunisdev.github.io)",
+  "readme":"https://github.com/yunisdev/routit#readme",
+  "homepage": "https://github.com/yunisdev/routit#readme",
+  "keywords": ["api","npm","package","typescript","sdk","routes"],
+  "bugs":{
+    "url" : "https://github.com/yunisdev/routit/issues",
+    "email" : "yunisdev.04@gmail.com"
+  },
   "module": "dist/routit.esm.js",
   "size-limit": [
     {
