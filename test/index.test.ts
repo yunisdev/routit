@@ -1,4 +1,4 @@
-import { RestRoute, SDKServer } from '../src'
+import { RestRoute, RoutitServer } from '../src'
 
 describe('Create example server', () => {
   interface TodosType {
@@ -8,7 +8,7 @@ describe('Create example server', () => {
     title: string
   }
 
-  class MyServer extends SDKServer {
+  class MyServer extends RoutitServer {
     serverRoot = 'http://localhost:8000'
     Todos = new RestRoute<TodosType>(this, 'todos')
   }

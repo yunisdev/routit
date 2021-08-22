@@ -1,3 +1,3 @@
-export class SDKServer {
+export class RoutitServer {
   serverRoot: string = ''
 }

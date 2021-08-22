@@ -1,5 +1,5 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios'
-import { SDKServer } from './SDKServer'
+import { RoutitServer } from './RoutitServer'
 
 export class RestRoute<
   ObjectType = any,
@@ -12,9 +12,9 @@ export class RestRoute<
   DeleteResponseType = undefined | null | '' | {}
 > {
   routeName: string
-  server: SDKServer
+  server: RoutitServer
 
-  constructor(server: SDKServer, routeName: string) {
+  constructor(server: RoutitServer, routeName: string) {
     this.routeName = routeName
     this.server = server
   }

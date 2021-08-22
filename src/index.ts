@@ -1,4 +1,4 @@
 import { RestRoute } from './RestRoute'
-import { SDKServer } from './SDKServer'
+import { RoutitServer } from './RoutitServer'
 
-export { RestRoute, SDKServer }
+export { RestRoute, RoutitServer }
