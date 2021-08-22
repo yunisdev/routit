@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "analyze": "size-limit --why",
     "json-server": "json-server --watch ./test/data/db.json --port=8000",
     "json-server-background": "pm2 --name JsonServer start \"npm run json-server\"",
-    "json-server-background-stop":"pm2 delete JsonServer"
+    "json-server-background-stop": "pm2 delete JsonServer"
   },
   "husky": {
     "hooks": {
