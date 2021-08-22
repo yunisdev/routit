@@ -59,3 +59,72 @@ const API = new MyServer()
 ```
 
 ## Making requests
+
+### GET
+
+There 2 ways of get request. One is `getAll`, other is `getOne`.
+
+#### getAll
+
+`getAll` is used for fetch all the elements.
+
+```js
+var response = await API.Todos.getAll()
+// This will request https://api.myserver.com/todos with GET
+```
+
+#### getOne
+
+`getOne` is used for fetch one element by id.
+
+```js
+var response = await API.Todos.getOne(5)
+// This will request https://api.myserver.com/todos/5 with GET
+```
+
+### POST
+
+`post` method will send data to server. (Mostly for creating)
+
+```js
+var response = await API.Todos.post({
+  id: 15,
+  completed: false,
+  title: 'lorem lorem',
+  userId: 1,
+})
+// This will request https://api.myserver.com/todos with POST
+```
+
+### PUT
+
+`put` method will send data to server by id. (Mostly for replacing data)
+
+```js
+var response = await API.Todos.put(15, {
+  userId: 1,
+  title: 'lorem ipsum',
+  completed: true,
+})
+// This will request https://api.myserver.com/todos/15 with PUT
+```
+
+### PATCH
+
+`patch` method will send data to server by id. (Mostly for patching data)
+
+```js
+var response = await API.Todos.patch(15, {
+  title: 'lorem ipsum dolor',
+})
+// This will request https://api.myserver.com/todos/15 with PATCH
+```
+
+### DELETE
+
+`delete` method will send delete request to server by id.
+
+```js
+var response = await API.Todos.delete(15)
+// This will request https://api.myserver.com/todos/15 with DELETE
+```
